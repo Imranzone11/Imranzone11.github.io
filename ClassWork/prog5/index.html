@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style type="text/css">
+        .class{
+            transform:scale(200%);
+            margin-left:2rem;
+            margin-top:2rem;
+        }
+    </style>
+</head>
+<body>
+    <button id="but">Enlarge</button>
+    <script type="text/javascript">
+        const but = document.querySelector('#but')
+        but.addEventListener('mouseenter',() => {
+            but.classList.add('class')
+        })
+
+        but.addEventListener('mouseleave',() => {
+            but.classList.remove('class')
+        })
+    </script>
+</body>
+</html>

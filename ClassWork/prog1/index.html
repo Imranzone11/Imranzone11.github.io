@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<body>
+    <button id="but">DateTime</button>
+    <p id="dt"></p>
+    <script type="text/javascript">
+        const but = document.querySelector('#but')
+        const pnl = document.querySelector('#dt')
+
+        but.addEventListener('click',()=>{
+            var time = new Date()
+            pnl.innerText = time.getDate() + "/" + (time.getMonth()+1) + '/' + time.getFullYear() + " " + time.getHours() + ":" + time.getMinutes() + ":" + time.getSeconds()
+        })
+    </script>
+</body>
+</html>

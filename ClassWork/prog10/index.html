@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<body>
+    <p>Enter the list as 1 2 4 5 6 6:</p>
+    <input type="text" id="inp" />
+    <button id="but">Sort</button>
+    <p>Output</p>
+    <p id="result"></p>
+    <script type="text/javascript">
+        const result = document.querySelector('#result')
+        const but = document.querySelector('#but')
+        const inp = document.querySelector('#inp')
+
+        function sort(list){
+            let n = list.length
+            for(let i=0;i<n-1;i++){
+                for(let j=i+1;j<n;j++){
+                    if(list[i] > list[j]){
+                        let temp = list[i]
+                        list[i] = list[j]
+                        list[j] = temp
+                    }
+                }
+            }
+            return list
+        }
+
+        but.addEventListener('click',()=>{
+            if(inp.value.length > 0){
+                let list = inp.value.split(' ').filter(x=>parseFloat(x))
+                list = sort(list)
+                result.innerText = list
+            }
+        })
+    </script>
+</body>
+</html>

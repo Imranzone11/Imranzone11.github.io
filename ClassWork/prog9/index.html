@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<body>
+    <p>Input</p>
+    <input type="text" id="inp" />
+    <button id="but">Sort</button>
+    <p id="res"></p>
+    <script type="text/javascript">
+        const res = document.querySelector('#res')
+        const but = document.querySelector('#but')
+        const inp = document.querySelector('#inp')
+
+        but.addEventListener('click',()=>{
+            if(inp.value.length > 0){
+                let r = inp.value
+                res.innerText = r.split("").sort().join("")
+            }
+        })
+    </script>
+</body>
+</html>

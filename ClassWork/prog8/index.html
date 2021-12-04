@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<body>
+    <input type="text" id="inp" />
+    <button id="but">Copy</button>
+    <script type="text/javascript">
+        const but = document.querySelector('#but')
+        const inp = document.querySelector('#inp')
+
+        but.addEventListener('click',()=>{
+            navigator.clipboard.writeText(inp.value)
+        })
+    </script>
+</body>
+</html>
